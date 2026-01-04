@@ -140,3 +140,84 @@ body.dark .navbar .nav-link:hover {
 body.dark .navbar .nav-link:focus {
   color: #ffffff;
 }
+
+/* ===== MOBILE NAVBAR FIX ===== */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-logo {
+    margin: 0 auto;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* ===== GLOBAL MOBILE FIX ===== */
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: rgba(10, 15, 30, 0.95);
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+  }
+}
+
+/* ===== HAMBURGER COLOR FIX ===== */
+
+/* DARK MODE → BIRU */
+html[data-theme='dark'] .hamburger {
+  color: var(--primary-color);
+}
+
+/* LIGHT MODE → GELAP */
+html[data-theme='light'] .hamburger {
+   color: var(--primary-color);
+}
+
+html[data-theme='dark'] .hamburger {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hamburger:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}

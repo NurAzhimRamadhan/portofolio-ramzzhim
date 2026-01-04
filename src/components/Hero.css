@@ -220,3 +220,44 @@ body.dark .hero-title {
     justify-content: center;
   }
 }
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 4rem 1.25rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-description {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    text-align: justify;
+  }
+}
+
+/* ===== MOBILE FIX: DOWNLOAD CV BUTTON ===== */
+@media (max-width: 640px) {
+  .hero-button {
+    width: 100%;
+    max-width: 280px;
+    margin: 1.5rem auto 0;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}

@@ -5,6 +5,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -35,17 +36,72 @@ const Navbar = () => {
           <span className="logo-text">Nur Azhim Ramadhan</span>
         </div>
         
-        <div className="navbar-menu">
-          <button onClick={() => scrollToSection('home')} className="nav-link">Home</button>
-          <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
-          <button onClick={() => scrollToSection('achievements')} className="nav-link">Achievements</button>
-          <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
-          <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
-          
-          <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+        <button 
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+
+        <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
+
+          <button
+            className="nav-link"
+            onClick={() => {
+              scrollToSection('home');
+              setMenuOpen(false);
+            }}
+          >
+            Home
+          </button>
+
+          <button
+            className="nav-link"
+            onClick={() => {
+              scrollToSection('about');
+              setMenuOpen(false);
+            }}
+          >
+            About
+          </button>
+
+          <button
+            className="nav-link"
+            onClick={() => {
+              scrollToSection('achievements');
+              setMenuOpen(false);
+            }}
+          >
+            Achievements
+          </button>
+
+          <button
+            className="nav-link"
+            onClick={() => {
+              scrollToSection('projects');
+              setMenuOpen(false);
+            }}
+          >
+            Projects
+          </button>
+
+          <button
+            className="nav-link"
+            onClick={() => {
+              scrollToSection('contact');
+              setMenuOpen(false);
+            }}
+          >
+            Contact
+          </button>
+
+          <button onClick={toggleTheme} className="theme-toggle">
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
+
         </div>
+
       </div>
     </nav>
   );
