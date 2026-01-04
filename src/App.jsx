@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext.jsx';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
