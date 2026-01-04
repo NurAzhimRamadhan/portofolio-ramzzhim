@@ -1,0 +1,50 @@
+.footer {
+  background: transparent;
+  padding: 4rem 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* BOX FOOTER (YANG KAMU MAU) */
+.footer-box {
+  background: var(--section-bg-alt);
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+
+  padding: 1.5rem 3rem;
+  max-width: 900px;
+  width: 100%;
+
+  text-align: center;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+/* TEXT */
+.footer-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 0.4rem 0;
+}
+
+.footer-subtext {
+  font-size: 0.85rem;
+  color: rgba(147, 197, 253, 0.75);
+  margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .footer-box {
+    padding: 1.2rem 1.5rem;
+    border-radius: 16px;
+  }
+}
